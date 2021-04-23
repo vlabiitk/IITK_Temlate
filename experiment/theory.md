@@ -4,13 +4,13 @@ Consider the following quote from a 2000 article in the Economist on the Bayesia
 
 In terms of classification, the Bayes theorem allows us to combine prior probabilities, along with observed evidence to arrive at the posterior probability. More or less, conditional probabilities represent the probability of an event occurring given evidence. To better understand, Bayes Theorem can be derived from the joint probability of A and B (i.e. P(A,B)) as follows:
 
-<img src="images/ole.gif"">
+<img src="images/ole.gif">
 
 ole.gif
 
 where *P(A|B)* is referred to as the posterior; *P(B|A)* is known as the likelihood, *P(A)* is the prior and *P(B)* is generally the evidence and is used as a scaling factor. Therefore, it is handy to remember Bayes Rule as:
 
-<img src="images/ole1.gif"">
+<img src="images/ole1.gif">
 
 ole1.gif
 
