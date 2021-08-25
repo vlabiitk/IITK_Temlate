@@ -1,14 +1,14 @@
  1. The covariance matrix is always
 
-a) Square
+    a) Square
 
-b) Positive Semidefinite
+    b) Positive Semidefinite
 
-c) Positive Definite
+    c) Positive Definite
 
-d) Symmetric
+    d) Symmetric
 
-e) None of the above.
-For each of the properties you selected, describe what would happen if the covariance matrix does not satisfy that property.
+    e) None of the above.
+    For each of the properties you selected, describe what would happen if the covariance matrix does not satisfy that property.
 
 2. Describe the possible set of decision boundaries that can be generated using gaussian density functions in a two class problem. 
