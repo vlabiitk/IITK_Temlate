@@ -6,12 +6,10 @@ In terms of classification, the Bayes theorem allows us to combine prior probabi
 
 <img src="images/ole.gif">
 
-ole.gif
 
 where *P(A|B)* is referred to as the posterior; *P(B|A)* is known as the likelihood, *P(A)* is the prior and *P(B)* is generally the evidence and is used as a scaling factor. Therefore, it is handy to remember Bayes Rule as:
 
 <img src="images/ole1.gif">
 
-ole1.gif
 
 These terms will be discussed a little later.
