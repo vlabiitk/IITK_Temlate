@@ -2,8 +2,50 @@ document.addEventListener('DOMContentLoaded', function() {
     // Canvas setup
     const canvas = document.getElementById('plot-canvas');
     const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
+    let width = canvas.width;
+    let height = canvas.height;
+      // Make canvas responsive
+    function resizeCanvas() {
+        const visualizationDiv = document.querySelector('.visualization');
+        const maxWidth = visualizationDiv.clientWidth - 40; // Account for padding
+        
+        if (maxWidth < 600) {
+            // Keep aspect ratio
+            const ratio = canvas.height / canvas.width;
+            canvas.width = maxWidth;
+            canvas.height = maxWidth * ratio;
+            width = canvas.width;
+            height = canvas.height;
+            
+            // Redraw everything
+            clearCanvas();
+            if (points1.length > 0 || points2.length > 0) {
+                drawPoints();
+            }
+        } else if (window.innerWidth >= 900 && canvas.width < 600) {
+            // Reset to original size on larger screens
+            canvas.width = 600;
+            canvas.height = 600;
+            width = canvas.width;
+            height = canvas.height;
+            
+            // Redraw everything
+            clearCanvas();
+            if (points1.length > 0 || points2.length > 0) {
+                drawPoints();
+            }
+        }
+    }
+    
+    // Call resize on load and window resize
+    resizeCanvas();
+    window.addEventListener('resize', function() {
+        // Debounce the resize event to prevent too many redraws
+        clearTimeout(window.resizeTimer);
+        window.resizeTimer = setTimeout(function() {
+            resizeCanvas();
+        }, 250);
+    });
     
     // Button elements
     const generateBtn = document.getElementById('generate-btn');
@@ -136,8 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return L;
     }
-    
-    // Function to map data coordinates to canvas coordinates
+      // Function to map data coordinates to canvas coordinates
     function mapToCanvas(x, y) {
         const xRange = plotBounds.xMax - plotBounds.xMin;
         const yRange = plotBounds.yMax - plotBounds.yMin;
@@ -158,8 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return [x, y];
     }
-    
-    // Function to clear the canvas
+      // Function to clear the canvas
     function clearCanvas() {
         ctx.clearRect(0, 0, width, height);
         drawAxes();
@@ -549,9 +589,19 @@ document.addEventListener('DOMContentLoaded', function() {
         plotBounds = { xMin: -10, xMax: 10, yMin: -10, yMax: 10 };
         clearCanvas();
     });
-    
-    // Initialize the canvas
+      // Initialize the canvas
     clearCanvas();
+
+    // Add touch support for mobile devices
+    canvas.addEventListener('touchstart', function(e) {
+        e.preventDefault(); // Prevent scrolling when touching the canvas
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        // Process the touch as you would a click
+        // Add code here if needed to handle the touch event
+    });
 
     // Load example configurations if available
     if (typeof boundaryExamples !== 'undefined') {
