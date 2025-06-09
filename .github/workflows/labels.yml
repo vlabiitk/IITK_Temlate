@@ -21,8 +21,8 @@ jobs:
     # The following job will delete the script that creates dev and testing branches 
       - uses: actions/checkout@v2
       - run: |
-          git config --local user.email "admin@vlabs.ac.in"
-          git config --local user.name "vleadadmin"
+          git config --local user.email "vlabiitk@gmail.com"
+          git config --local user.name "vlabiitk"
           git checkout main
           git rm -rf .github/workflows/labels.yml
           git commit -m "Label script is deleted."

@@ -18,18 +18,18 @@ jobs:
             node-version: '12'
             check-latest: true
     - run: |
-        git clone --depth=1 https://github.com/virtual-labs/ph3-lab-mgmt
+        git clone --depth=1 https://github.com/vlabiitk/ph3-lab-mgmt
         cd ph3-lab-mgmt
         npm install
         npm run build-exp
         cd ../
-        git config --local user.email "admin@vlabs.ac.in"
-        git config --local user.name "vleadadmin"
+        git config --local user.email "vlabiitk@gmail.com"
+        git config --local user.name "vlabiitk"
         git checkout --orphan gh-pages
         git reset
         git add build/* -f
         git mv build/* ./ -f
-        git commit -m "https://virtual-labs.github.io/${{ github.repository }} click on the link to test your code."
+        git commit -m "https://vlabiitk.github.io/${{ github.repository }} click on the link to test your code."
     - uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
