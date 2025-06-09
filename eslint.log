@@ -1,0 +1,21 @@
+
+/home/runner/work/exp-bayesian-classification-iiith/exp-bayesian-classification-iiith/experiment/simulation/script.js
+  215:16  warning  'x0' is assigned a value but never used         no-unused-vars
+  216:16  warning  'xWidth' is assigned a value but never used     no-unused-vars
+  216:24  warning  '_' is assigned a value but never used          no-unused-vars
+  221:23  warning  'y0' is assigned a value but never used         no-unused-vars
+  222:16  warning  '__' is assigned a value but never used         no-unused-vars
+  222:20  warning  'yHeight' is assigned a value but never used    no-unused-vars
+  236:26  warning  'yPos' is assigned a value but never used       no-unused-vars
+  248:20  warning  'xPos' is assigned a value but never used       no-unused-vars
+  310:14  warning  'visualizeDensities' is defined but never used  no-unused-vars
+  431:15  warning  'xStep' is assigned a value but never used      no-unused-vars
+  432:15  warning  'yStep' is assigned a value but never used      no-unused-vars
+  600:15  warning  'x' is assigned a value but never used          no-unused-vars
+  601:15  warning  'y' is assigned a value but never used          no-unused-vars
+  613:27  warning  'boundaryExamples' is not defined               no-undef
+  615:34  warning  'boundaryExamples' is not defined               no-undef
+  616:43  warning  'loadExample' is not defined                    no-undef
+
+✖ 16 problems (0 errors, 16 warnings)
+

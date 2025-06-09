@@ -1,0 +1,11 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-bayesian-classification-iiith/exp-bayesian-classification-iiith/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-bayesian-classification-iiith/exp-bayesian-classification-iiith/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Validated true

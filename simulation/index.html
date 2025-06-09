@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Interactive Bayesian Classification Simulation">
+    <meta name="theme-color" content="#3498db">
+    <title>Bayesian Classification Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bayesian Classification Simulation</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="control-panel">
+                <div class="experiment-controls">
+                    <h2>Parameters</h2>
+                    
+                    <div class="class-params">
+                        <h3>Class 1 Parameters</h3>
+                        <div class="param-group">
+                            <label>Mean X:</label>
+                            <input type="text" id="mean1x" value="-2">
+                        </div>
+                        <div class="param-group">
+                            <label>Mean Y:</label>
+                            <input type="text" id="mean1y" value="-2">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance XX:</label>
+                            <input type="text" id="cov1xx" value="1">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance XY:</label>
+                            <input type="text" id="cov1xy" value="0">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance YY:</label>
+                            <input type="text" id="cov1yy" value="1">
+                        </div>
+                        <div class="param-group">
+                            <label>Prior Probability:</label>
+                            <input type="text" id="prior1" value="0.5">
+                        </div>
+                    </div>
+                    
+                    <div class="class-params">
+                        <h3>Class 2 Parameters</h3>
+                        <div class="param-group">
+                            <label>Mean X:</label>
+                            <input type="text" id="mean2x" value="2">
+                        </div>
+                        <div class="param-group">
+                            <label>Mean Y:</label>
+                            <input type="text" id="mean2y" value="2">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance XX:</label>
+                            <input type="text" id="cov2xx" value="1">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance XY:</label>
+                            <input type="text" id="cov2xy" value="0">
+                        </div>
+                        <div class="param-group">
+                            <label>Covariance YY:</label>
+                            <input type="text" id="cov2yy" value="1">
+                        </div>
+                        <div class="param-group">
+                            <label>Prior Probability:</label>
+                            <input type="text" id="prior2" value="0.5">
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button style="display: none;" id="generate-btn">Generate Data</button>
+                        <button id="mark-all-btn">Mark All</button>
+                        <button id="clear-btn">Clear</button>
+                    </div>
+                </div>            </div>
+            
+            <div class="visualization">
+                <canvas id="plot-canvas" width="600" height="600"></canvas>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
